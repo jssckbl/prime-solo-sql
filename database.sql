@@ -23,7 +23,9 @@ SELECT * FROM "accounts" WHERE "account_balance" > 100.00;
 INSERT INTO "accounts" ("username", "city", "transactions_completed", "transactions_attempted", "account_balance") VALUES ('jessica', 'minneapolis', 4, 5, 234.45);
 
 -- 9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: How do you delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
+DELETE FROM "accounts" WHERE "city" = 'miami' AND "transactions_completed" < 5;
 
+DELETE FROM "accounts" WHERE "city" = 'phoenix' AND "transactions_completed" < 5;
 
 
 Stretch Goal Questions (word problems)
